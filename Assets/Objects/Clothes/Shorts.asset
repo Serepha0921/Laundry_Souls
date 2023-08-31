@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39477f2a89d04093a2ba5640fce58ac, type: 3}
+  m_Name: Shorts
+  m_EditorClassIdentifier: 
+  id: 8
+  Clothes_name: Shorts
+  type: 0
+  shape:
+  - {fileID: 21300000, guid: 6497659d92daf4ffd9914aee5a9a64f1, type: 3}
+  - {fileID: 21300000, guid: a2704d8940722488d8304677be59a9de, type: 3}
+  - {fileID: 21300000, guid: a993e110e4b524e98b92f72b6ccc5327, type: 3}
+  price: 0

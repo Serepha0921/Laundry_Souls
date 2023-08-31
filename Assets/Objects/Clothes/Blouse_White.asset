@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39477f2a89d04093a2ba5640fce58ac, type: 3}
+  m_Name: Blouse_White
+  m_EditorClassIdentifier: 
+  id: 2
+  Clothes_name: Blouse
+  type: 1
+  shape:
+  - {fileID: 21300000, guid: eda91a9b2183c41c1ae8323e27d7f0d9, type: 3}
+  - {fileID: 21300000, guid: d39a7e052efe24e54ba89bf6a10a8e10, type: 3}
+  - {fileID: 21300000, guid: 1d7358c40b7bd4d4ebb5a0ec668958a3, type: 3}
+  price: 0

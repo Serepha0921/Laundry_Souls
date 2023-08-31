@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39477f2a89d04093a2ba5640fce58ac, type: 3}
+  m_Name: Shirt_White
+  m_EditorClassIdentifier: 
+  id: 7
+  Clothes_name: Shirt
+  type: 0
+  shape:
+  - {fileID: 21300000, guid: 69cd155b6b910419880cf2ba09455db7, type: 3}
+  - {fileID: 21300000, guid: 8c8f783262702450d8a02b117473c27d, type: 3}
+  - {fileID: 21300000, guid: 35d42dc72db4b4623b19e3540374d3fb, type: 3}
+  price: 0

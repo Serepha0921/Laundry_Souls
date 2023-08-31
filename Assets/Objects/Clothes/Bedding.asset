@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39477f2a89d04093a2ba5640fce58ac, type: 3}
+  m_Name: Bedding
+  m_EditorClassIdentifier: 
+  id: 1
+  Clothes_name: Bedding
+  type: 0
+  shape:
+  - {fileID: 21300000, guid: bf8c1dadfa7814462912490d54b4a216, type: 3}
+  - {fileID: 21300000, guid: b449ddd1cd2d447a285bae640d3d6a95, type: 3}
+  - {fileID: 21300000, guid: 2e24e468c6aea4284a9e0bbaff912b6a, type: 3}
+  price: 0

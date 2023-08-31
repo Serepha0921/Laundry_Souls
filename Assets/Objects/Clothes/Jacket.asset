@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39477f2a89d04093a2ba5640fce58ac, type: 3}
+  m_Name: Jacket
+  m_EditorClassIdentifier: 
+  id: 4
+  Clothes_name: Jacket
+  type: 1
+  shape:
+  - {fileID: 21300000, guid: efe22bcad840e4560b5f4a68a94c4582, type: 3}
+  - {fileID: 21300000, guid: b320ab493e91746ebb2559be0849e774, type: 3}
+  - {fileID: 21300000, guid: 8c1021d736bf844418e279bd2dc2ec3f, type: 3}
+  price: 0

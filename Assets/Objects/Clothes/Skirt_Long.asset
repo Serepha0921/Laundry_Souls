@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39477f2a89d04093a2ba5640fce58ac, type: 3}
+  m_Name: Skirt_Long
+  m_EditorClassIdentifier: 
+  id: 9
+  Clothes_name: Skirt
+  type: 1
+  shape:
+  - {fileID: 21300000, guid: a06221ff1746d41a088749c5c0880509, type: 3}
+  - {fileID: 21300000, guid: 781e868961a2a402c960d0a75e9badd2, type: 3}
+  - {fileID: 21300000, guid: 8a32012d9b3b24e058771867467d0197, type: 3}
+  price: 0
