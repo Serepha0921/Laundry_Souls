@@ -2161,7 +2161,7 @@ GameObject:
   - component: {fileID: 1871944518}
   - component: {fileID: 1871944519}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2576,7 +2576,7 @@ GameObject:
   - component: {fileID: 2051885187}
   - component: {fileID: 2051885188}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2591,8 +2591,8 @@ Transform:
   m_GameObject: {fileID: 2051885186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.09710307}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.2629, y: -19.2581, z: -0.09710307}
+  m_LocalScale: {x: 19.68734, y: 2.7426372, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1058602165}
@@ -2639,7 +2639,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.35686275, g: 0.43529415, b: 0.36862746, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
