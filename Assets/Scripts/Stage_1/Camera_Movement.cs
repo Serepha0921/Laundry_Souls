@@ -33,7 +33,16 @@ public class Camera_Movement : MonoBehaviour {
         switch (cut)
         {
             case 0:
-                
+                UP.SetActive (false);
+                DOWN.SetActive (true);
+                break;
+            case 1:
+                UP.SetActive (true);
+                DOWN.SetActive (true);
+                break;
+            case 2:
+                UP.SetActive (true);
+                DOWN.SetActive(false);
                 break;
         }
     }
