@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Jacket_0
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 258
+        width: 580
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d68b25672c3840dca52ea2bdc7d1576
+      internalID: -1494814893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
     - - {x: -292, y: -292}
       - {x: -249, y: 305}
@@ -136,7 +157,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jacket_0: -1494814893
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
