@@ -57,4 +57,20 @@ public class ClothesManager : MonoBehaviour
             temp.SetActive(true);
         }
     }
+
+    //fix copy the cloth information not just put in the whole Gameobject
+    public void sorted(GameObject cloth, string bucket){
+        instance.clothes.Enqueue(cloth);
+        switch(bucket){
+            case "Laundry":
+                instance.Laundries.Add(cloth.GetComponent<Cloth>());
+                break;
+            case "DryCleaning":
+                instance.Dry_Cleans.Add(cloth.GetComponent<Cloth>());
+                break;
+            case "Trash":
+                break;
+        }
+        cloth.SetActive(false);
+    }
 }

@@ -6,6 +6,8 @@ public class Cloth : MonoBehaviour
 {
     public string owner;
     public Clothes_Status status;
+    [Header("ClothManager")]
+    public ClothesManager cm;
     [Header("Moving")]
     public Transform movingPoint;
     public float speed = 0.1f;
@@ -79,6 +81,9 @@ public class Cloth : MonoBehaviour
         if (collision.gameObject.tag == "SortingBucket")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
+            if(!moving){
+                cm.sorted(gameObject, collision.name);
+            }
         }
     }
 
@@ -86,6 +91,9 @@ public class Cloth : MonoBehaviour
         if (collision.gameObject.tag == "SortingBucket")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
+            if(!moving){
+                cm.sorted(gameObject, collision.name);
+            }
         }
     }
 
