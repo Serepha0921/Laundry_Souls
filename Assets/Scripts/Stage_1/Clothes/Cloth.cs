@@ -32,7 +32,7 @@ public class Cloth : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-            this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX/2, mousePos.y - startPosY/2);
+            this.gameObject.transform.localPosition = new Vector3(mousePos.x, mousePos.y, this.gameObject.transform.localPosition.z);
         }
     }
 
