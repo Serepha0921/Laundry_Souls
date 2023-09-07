@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Cloth : MonoBehaviour
 {
+    public string owner;
     public Clothes_Status status;
-
     [Header("Moving")]
     public Transform movingPoint;
     public float speed = 0.1f;
@@ -78,7 +78,14 @@ public class Cloth : MonoBehaviour
         Debug.Log("in");
         if (collision.gameObject.tag == "SortingBucket")
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[2];
+            gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision) {
+        if (collision.gameObject.tag == "SortingBucket")
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
         }
     }
 

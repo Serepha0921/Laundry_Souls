@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Sweater
   type: 1
   shape:
-  - {fileID: 21300000, guid: e023d502f62974ed4b04f0abe93ebb08, type: 3}
-  - {fileID: 21300000, guid: 3b921d5935b6c4140a5069bdb8ff49dd, type: 3}
-  - {fileID: 21300000, guid: 2e7fac79a9c1e4ea7982ed9ec34963c9, type: 3}
+  - {fileID: -1849312515, guid: e023d502f62974ed4b04f0abe93ebb08, type: 3}
+  - {fileID: 636803833, guid: 3b921d5935b6c4140a5069bdb8ff49dd, type: 3}
+  - {fileID: -650739361, guid: 2e7fac79a9c1e4ea7982ed9ec34963c9, type: 3}
   price: 0

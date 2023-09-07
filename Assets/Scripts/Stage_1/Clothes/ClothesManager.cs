@@ -13,7 +13,11 @@ public class ClothesManager : MonoBehaviour
     [Header("SortBucket")]
     public GameObject Laundry;
     public GameObject DryClean;
-    public GameObject HouseHold;
+    public GameObject Trash;
+
+    [Header("ClothesList")]
+    public List<Cloth> Laundries;
+    public List<Cloth> Dry_Cleans;
 
     private void Awake()
     {
@@ -28,6 +32,7 @@ public class ClothesManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
+    //Make 5 gamebobject so that it can render the clothes when it spwan by customers
     private void Start()
     {
         clothes = new Queue<GameObject>();

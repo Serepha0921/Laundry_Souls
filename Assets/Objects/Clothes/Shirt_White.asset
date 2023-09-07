@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Shirt
   type: 0
   shape:
-  - {fileID: 21300000, guid: 69cd155b6b910419880cf2ba09455db7, type: 3}
-  - {fileID: 21300000, guid: 8c8f783262702450d8a02b117473c27d, type: 3}
-  - {fileID: 21300000, guid: 35d42dc72db4b4623b19e3540374d3fb, type: 3}
+  - {fileID: 535611501, guid: 69cd155b6b910419880cf2ba09455db7, type: 3}
+  - {fileID: 1517255060, guid: 8c8f783262702450d8a02b117473c27d, type: 3}
+  - {fileID: -74109132, guid: 35d42dc72db4b4623b19e3540374d3fb, type: 3}
   price: 0

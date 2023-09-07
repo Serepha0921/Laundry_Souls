@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum human { oldadultfem2, adultfem, adultmasc, oldadultmasc, youngadultfem, youngadultmasc };
 public class CustomerManager : MonoBehaviour
 {
     public GameObject customer;
     private Queue<GameObject> customers;
     public int customers_number;
-    private List<GameObject> line;
+    private bool turn = true;
 
     public string[] names;
     public Clothes_Status[] clothes;
@@ -32,7 +31,6 @@ public class CustomerManager : MonoBehaviour
     private void Start()
     {
         customers = new Queue<GameObject>();
-        line = new List<GameObject>();
         GameObject temp;
         
         for (int i = 0; i < customers_number; i++)
@@ -46,12 +44,11 @@ public class CustomerManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        while (line.Count < 2)
+        while (turn)
         {
-            line.Add(getCustomer());
+            getCustomer();
+            turn = false;
         }
-        line[1].GetComponent<customer>().turn = Turn.not_yet;
-        line[0].GetComponent<customer>().turn = Turn.my_turn;
     }
 
     public static GameObject getCustomer()

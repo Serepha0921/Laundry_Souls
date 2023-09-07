@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Blouse
   type: 1
   shape:
-  - {fileID: 21300000, guid: eda91a9b2183c41c1ae8323e27d7f0d9, type: 3}
-  - {fileID: 21300000, guid: d39a7e052efe24e54ba89bf6a10a8e10, type: 3}
-  - {fileID: 21300000, guid: 1d7358c40b7bd4d4ebb5a0ec668958a3, type: 3}
+  - {fileID: 608828598, guid: eda91a9b2183c41c1ae8323e27d7f0d9, type: 3}
+  - {fileID: 799742586, guid: d39a7e052efe24e54ba89bf6a10a8e10, type: 3}
+  - {fileID: -1454282208, guid: 1d7358c40b7bd4d4ebb5a0ec668958a3, type: 3}
   price: 0
