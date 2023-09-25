@@ -10,14 +10,13 @@ public class StageManager : MonoBehaviour
     public const float StartingTime = 300.0f;// 300 second
 
     public static StageManager instance;
+    [Header("Manager")]
+    public CustomerManager CM;
 
+    [Header("Objects")]
     public GameObject Clock;
-
-    [Header("Invoice")]
-    public GameObject Laundry_Button;
-    public GameObject DryClean_Button;
-    public GameObject HouseHold_Button;
     public GameObject Paper;
+    private Vector3 OriginalPaperPosition;
 
     private void Awake() {
         if(instance == null){
@@ -29,7 +28,24 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         Countingtime = StartingTime;
-        //Paper.SetActive(false);
+        CM.turn = true;
+        OriginalPaperPosition = Paper.transform.position;
+        Paper.SetActive(false);
+    }
+
+    public void Laundry_Button(){
+        Debug.Log("Laundry Button");
+        PrintPaper();
+    }
+    public void DryClean_Button(){
+        PrintPaper();
+    }
+    public void HouseHold_Button(){
+        PrintPaper();
+    }
+
+    public void PrintPaper(){
+        Paper.SetActive(true);
     }
 
     // Update is called once per frame
@@ -37,5 +53,10 @@ public class StageManager : MonoBehaviour
     {
         if(Countingtime > 0)
             Countingtime -= 1f * Time.deltaTime;
+
+        if(CM.turn){
+            Paper.transform.position = OriginalPaperPosition;
+            Paper.SetActive(false);
+        }
     }
 }

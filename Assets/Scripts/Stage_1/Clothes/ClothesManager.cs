@@ -51,11 +51,17 @@ public class ClothesManager : MonoBehaviour
         GameObject temp;
         for(int i = 0; i < cloth_number; i++)
         {
+            Debug.Log(i);
             temp = instance.clothes.Dequeue();
             temp.GetComponent<Cloth>().status = stat[i];
             temp.GetComponent<SpriteRenderer>().sprite = stat[i].shape[0];
             temp.SetActive(true);
         }
+    }
+
+    public void RidClothes(GameObject temp){
+        temp.SetActive(false);
+        instance.clothes.Enqueue(temp);
     }
 
     //fix copy the cloth information not just put in the whole Gameobject

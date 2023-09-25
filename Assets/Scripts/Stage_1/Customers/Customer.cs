@@ -74,4 +74,22 @@ public class customer : MonoBehaviour {
         ClothSpawned = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.name == "Ticket"){
+            Debug.Log("Next");
+            if(!other.gameObject.GetComponent<Drag_Feature>().moving){
+                customerManager.next = true;
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if(other.gameObject.name == "Ticket"){
+            Debug.Log("Next");
+            if(!other.gameObject.GetComponent<Drag_Feature>().moving){
+                customerManager.next = true;
+            }
+        }
+    }
+
 }

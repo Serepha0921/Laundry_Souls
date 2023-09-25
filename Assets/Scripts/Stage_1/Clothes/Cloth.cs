@@ -43,12 +43,12 @@ public class Cloth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("in");
         if (collision.gameObject.tag == "SortingBucket")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
             if(!DF.moving){
                 cm.sorted(gameObject, collision.name);
+                cm.RidClothes(gameObject);
             }
         }
     }
@@ -59,13 +59,13 @@ public class Cloth : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
             if(!DF.moving){
                 cm.sorted(gameObject, collision.name);
+                cm.RidClothes(gameObject);
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Out");
         gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[0];
     }
 }

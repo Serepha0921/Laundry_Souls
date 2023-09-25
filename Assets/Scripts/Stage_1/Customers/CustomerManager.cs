@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -8,8 +9,9 @@ public class CustomerManager : MonoBehaviour
     public GameObject customer;
     private Queue<GameObject> customers;
     public int customers_number;
-    private bool turn = true;
-
+    public bool turn = true;
+    public bool next = false;
+    private GameObject currentCustomer;
     public string[] names;
     public Clothes_Status[] clothes;
 
@@ -45,10 +47,17 @@ public class CustomerManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        while (turn)
+        if (turn)
         {
-            getCustomer();
+            currentCustomer = getCustomer();
             turn = false;
+        }
+
+        if(next){
+            RidCustomer(currentCustomer);
+            currentCustomer = null;
+            next = false;
+            turn = true;
         }
     }
 
@@ -62,6 +71,11 @@ public class CustomerManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    public static void RidCustomer(GameObject custom){
+        instance.customers.Enqueue(custom);
+        custom.SetActive(false);
     }
 
 }
