@@ -41,6 +41,7 @@ public class customer : MonoBehaviour {
         {
             chooseClothes = Random.Range(0, customerManager.clothes.Length-1);
             clothes.Add(customerManager.clothes[chooseClothes]);
+            customer_name = customerManager.names[Random.Range(0, customerManager.names.Length - 1)];
         }
     }
 

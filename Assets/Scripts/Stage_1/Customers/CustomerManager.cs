@@ -30,6 +30,7 @@ public class CustomerManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        //Random Customer Lists
         customers = new Queue<GameObject>();
         GameObject temp;
         

@@ -12,31 +12,17 @@ public class Cloth : MonoBehaviour
     public Transform movingPoint;
     public float speed = 0.1f;
     private bool inital_moving;
-
-    private bool moving;
-
-    private float startPosX;
-    private float startPosY;
+    private Drag_Feature DF;
 
     private void Awake()
     {
         Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
         gameObject.GetComponent<BoxCollider2D>().size = S;
+        DF = gameObject.GetComponent<Drag_Feature>();
         inital_moving = true;
     }
 
     // Update is called once per frame
-    private void Update()
-    {
-        if (moving)
-        {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            this.gameObject.transform.localPosition = new Vector3(mousePos.x, mousePos.y, this.gameObject.transform.localPosition.z);
-        }
-    }
 
     private void LateUpdate()
     {
@@ -55,33 +41,13 @@ public class Cloth : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            startPosX = mousePos.x - this.transform.localPosition.x;
-            startPosY = mousePos.y = this.transform.localPosition.y;
-
-            moving = true;
-        }
-    }
-
-    private void OnMouseUp()
-    {
-        moving = false;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("in");
         if (collision.gameObject.tag == "SortingBucket")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
-            if(!moving){
+            if(!DF.moving){
                 cm.sorted(gameObject, collision.name);
             }
         }
@@ -91,7 +57,7 @@ public class Cloth : MonoBehaviour
         if (collision.gameObject.tag == "SortingBucket")
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
-            if(!moving){
+            if(!DF.moving){
                 cm.sorted(gameObject, collision.name);
             }
         }

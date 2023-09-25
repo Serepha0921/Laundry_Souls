@@ -11,6 +11,14 @@ public class StageManager : MonoBehaviour
 
     public static StageManager instance;
 
+    public GameObject Clock;
+
+    [Header("Invoice")]
+    public GameObject Laundry_Button;
+    public GameObject DryClean_Button;
+    public GameObject HouseHold_Button;
+    public GameObject Paper;
+
     private void Awake() {
         if(instance == null){
             instance = this;
@@ -21,6 +29,7 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         Countingtime = StartingTime;
+        //Paper.SetActive(false);
     }
 
     // Update is called once per frame
