@@ -24,7 +24,7 @@ public class Cloth : MonoBehaviour
 
     // Update is called once per frame
 
-    private void LateUpdate()
+    private void Update()
     {
         if (inital_moving)
         {
@@ -47,6 +47,7 @@ public class Cloth : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
             if(!DF.moving){
+                gameObject.transform.position = movingPoint.position;
                 cm.sorted(gameObject, collision.name);
                 cm.RidClothes(gameObject);
             }
@@ -58,6 +59,7 @@ public class Cloth : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
             if(!DF.moving){
+                gameObject.transform.position = movingPoint.position;
                 cm.sorted(gameObject, collision.name);
                 cm.RidClothes(gameObject);
             }

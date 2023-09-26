@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c068e605d3548398b282810237bf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clothes_number: 5
+  clothes_number: 20
   cloth: {fileID: 1433535495}
   Laundry: {fileID: 71049110}
   DryClean: {fileID: 1996968014}
@@ -724,6 +724,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customer: {fileID: 1677900607}
   customers_number: 5
+  turn: 1
+  next: 0
   names:
   - Amelia Cruz
   - Jackson Bennett
@@ -2686,6 +2688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3512805b28d43909246f637869f4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CM: {fileID: 536769030}
   Clock: {fileID: 0}
   Paper: {fileID: 830408343}
 --- !u!1 &1795270707

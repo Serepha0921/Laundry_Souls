@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClothesManager : MonoBehaviour
@@ -51,7 +52,6 @@ public class ClothesManager : MonoBehaviour
         GameObject temp;
         for(int i = 0; i < cloth_number; i++)
         {
-            Debug.Log(i);
             temp = instance.clothes.Dequeue();
             temp.GetComponent<Cloth>().status = stat[i];
             temp.GetComponent<SpriteRenderer>().sprite = stat[i].shape[0];
