@@ -28,9 +28,9 @@ public class DialogueManager : MonoBehaviour {
     public void StartDialogue(Dialogue dialogue){
         current_actor = dialogue.actors;
         current_message = dialogue.messages;
+        active_dialogue = 0;
 
-
-        Name.text = current_actor[active_dialogue].name;
+        Name.text = current_actor[current_message[active_dialogue].id].name;
         sentences.Clear();
 
         foreach (string sentence in current_message[active_dialogue].sentences){
@@ -43,7 +43,15 @@ public class DialogueManager : MonoBehaviour {
     public void DisplayNextSentence(){
         if (sentences.Count == 0)
         {
-            return;
+            active_dialogue += 1;
+            if (current_message.Length - 1 < active_dialogue){
+                Debug.Log("dialogue End");
+                return;
+            }
+            Name.text = current_actor[current_message[active_dialogue].id].name;
+            foreach (string mess in current_message[active_dialogue].sentences){
+                sentences.Enqueue(mess);
+            }
         }
         string sentence = sentences.Dequeue();
         Dialogue.text = sentence;
