@@ -1324,6 +1324,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3830465231366552223, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: m_Size.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830465231366552223, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: m_Size.y
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830465231366552223, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3830465231366552223, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5841997568531788394, guid: 13981480d83284747b1fae221de16a68, type: 3}
       propertyPath: cm
       value: 
@@ -1340,9 +1356,33 @@ PrefabInstance:
       propertyPath: customerManager
       value: 
       objectReference: {fileID: 536769030}
+    - target: {fileID: 5841997568531788394, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: appearance.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 578973fb6cda14967a14a0e89255c264, type: 3}
+    - target: {fileID: 5841997568531788394, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: appearance.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: af301979d89304be986ee265f1b2cd36, type: 3}
+    - target: {fileID: 5841997568531788394, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: appearance.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 76a4a3f70e2f74a39aa535af959c4686, type: 3}
+    - target: {fileID: 5841997568531788394, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: appearance.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: b1a5911581769481bad1c8446fb19a95, type: 3}
+    - target: {fileID: 5841997568531788394, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: appearance.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7df333f868c774fa88032247bfca655a, type: 3}
     - target: {fileID: 8066783376800643509, guid: 13981480d83284747b1fae221de16a68, type: 3}
       propertyPath: m_Name
       value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066783376800643509, guid: 13981480d83284747b1fae221de16a68, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
