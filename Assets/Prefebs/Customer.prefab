@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2082870431978268946}
   - component: {fileID: 5841997568531788394}
   - component: {fileID: 3830465231366552223}
+  - component: {fileID: 6195198173324807871}
+  - component: {fileID: 5320534341845356173}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -25,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8066783376800643509}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5841997568531788394
 MonoBehaviour:
@@ -46,21 +48,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customer_name: 
-  type: 0
   clothes: []
   appearance:
   - {fileID: 21300000, guid: 0625540a77133466dbfb7a39d22ee6f4, type: 3}
-  - {fileID: 21300000, guid: b1a5911581769481bad1c8446fb19a95, type: 3}
-  - {fileID: 21300000, guid: 7df333f868c774fa88032247bfca655a, type: 3}
   - {fileID: 21300000, guid: 578973fb6cda14967a14a0e89255c264, type: 3}
   - {fileID: 21300000, guid: af301979d89304be986ee265f1b2cd36, type: 3}
   - {fileID: 21300000, guid: 76a4a3f70e2f74a39aa535af959c4686, type: 3}
-  cm: {fileID: 0}
+  - {fileID: 21300000, guid: b1a5911581769481bad1c8446fb19a95, type: 3}
+  - {fileID: 21300000, guid: 7df333f868c774fa88032247bfca655a, type: 3}
+  customerManager: {fileID: 0}
+  clothesManager: {fileID: 0}
   dialogue:
-    name: 
-    sentences: []
+    actors: []
+    messages: []
   turn: 0
-  amountClothes: 0
 --- !u!212 &3830465231366552223
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -107,9 +108,61 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &6195198173324807871
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066783376800643509}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6, y: -0.58}
+  m_Size: {x: 5.08, y: 9.65}
+  m_Direction: 0
+--- !u!320 &5320534341845356173
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066783376800643509}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: c7abafdfd49584376b025d3459d0ee4b, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []

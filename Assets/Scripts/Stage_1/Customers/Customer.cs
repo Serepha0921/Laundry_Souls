@@ -14,7 +14,6 @@ public class customer : MonoBehaviour {
     public ClothesManager clothesManager;
 
     [Space]
-    public Dialogue dialogue;
 
     public Turn turn; 
 
