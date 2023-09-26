@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Skirt
   type: 1
   shape:
-  - {fileID: 21300000, guid: a06221ff1746d41a088749c5c0880509, type: 3}
-  - {fileID: 21300000, guid: 781e868961a2a402c960d0a75e9badd2, type: 3}
-  - {fileID: 21300000, guid: 8a32012d9b3b24e058771867467d0197, type: 3}
+  - {fileID: 800573663, guid: a06221ff1746d41a088749c5c0880509, type: 3}
+  - {fileID: -618628854, guid: 781e868961a2a402c960d0a75e9badd2, type: 3}
+  - {fileID: -2022446464, guid: 8a32012d9b3b24e058771867467d0197, type: 3}
   price: 0

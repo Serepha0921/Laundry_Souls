@@ -4,39 +4,27 @@ using UnityEngine;
 
 public class Cloth : MonoBehaviour
 {
+    public string owner;
     public Clothes_Status status;
-
+    [Header("ClothManager")]
+    public ClothesManager cm;
     [Header("Moving")]
     public Transform movingPoint;
     public float speed = 0.1f;
     private bool inital_moving;
-
-    private bool moving;
-
-    private float startPosX;
-    private float startPosY;
+    private Drag_Feature DF;
 
     private void Awake()
     {
         Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
         gameObject.GetComponent<BoxCollider2D>().size = S;
+        DF = gameObject.GetComponent<Drag_Feature>();
         inital_moving = true;
     }
 
     // Update is called once per frame
+
     private void Update()
-    {
-        if (moving)
-        {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX/2, mousePos.y - startPosY/2);
-        }
-    }
-
-    private void LateUpdate()
     {
         if (inital_moving)
         {
@@ -53,38 +41,33 @@ public class Cloth : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetMouseButton(0))
+        if (collision.gameObject.tag == "SortingBucket")
         {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            startPosX = mousePos.x - this.transform.localPosition.x;
-            startPosY = mousePos.y = this.transform.localPosition.y;
-
-            moving = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
+            if(!DF.moving){
+                gameObject.transform.position = movingPoint.position;
+                cm.sorted(gameObject, collision.name);
+                cm.RidClothes(gameObject);
+            }
         }
     }
 
-    private void OnMouseUp()
-    {
-        moving = false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("in");
+    private void OnTriggerStay2D(Collider2D collision) {
         if (collision.gameObject.tag == "SortingBucket")
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[2];
+            gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[status.shape.Length - 1];
+            if(!DF.moving){
+                gameObject.transform.position = movingPoint.position;
+                cm.sorted(gameObject, collision.name);
+                cm.RidClothes(gameObject);
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Out");
         gameObject.GetComponent<SpriteRenderer>().sprite = status.shape[0];
     }
 }

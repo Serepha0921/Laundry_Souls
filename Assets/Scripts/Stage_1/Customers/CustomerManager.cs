@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
-public enum human { oldadultfem2, adultfem, adultmasc, oldadultmasc, youngadultfem, youngadultmasc };
 public class CustomerManager : MonoBehaviour
 {
     public GameObject customer;
     private Queue<GameObject> customers;
     public int customers_number;
-    private List<GameObject> line;
-
+    public bool turn = true;
+    public bool next = false;
+    private GameObject currentCustomer;
     public string[] names;
     public Clothes_Status[] clothes;
 
@@ -31,8 +32,8 @@ public class CustomerManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        //Random Customer Lists
         customers = new Queue<GameObject>();
-        line = new List<GameObject>();
         GameObject temp;
         
         for (int i = 0; i < customers_number; i++)
@@ -46,12 +47,18 @@ public class CustomerManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        while (line.Count < 2)
+        if (turn)
         {
-            line.Add(getCustomer());
+            currentCustomer = getCustomer();
+            turn = false;
         }
-        line[1].GetComponent<customer>().turn = Turn.not_yet;
-        line[0].GetComponent<customer>().turn = Turn.my_turn;
+
+        if(next){
+            RidCustomer(currentCustomer);
+            currentCustomer = null;
+            next = false;
+            turn = true;
+        }
     }
 
     public static GameObject getCustomer()
@@ -64,6 +71,11 @@ public class CustomerManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    public static void RidCustomer(GameObject custom){
+        instance.customers.Enqueue(custom);
+        custom.SetActive(false);
     }
 
 }

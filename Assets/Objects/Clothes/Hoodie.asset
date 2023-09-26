@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Hoodie
   type: 0
   shape:
-  - {fileID: 21300000, guid: ff56c7f8e55ef4ad3b19ad04752fbd30, type: 3}
-  - {fileID: 21300000, guid: 2a71a74f5cfaf4c70a2e2cc6473adf4a, type: 3}
-  - {fileID: 21300000, guid: 779ca973f13214ade8f94679a6cb6714, type: 3}
+  - {fileID: 1946420269, guid: ff56c7f8e55ef4ad3b19ad04752fbd30, type: 3}
+  - {fileID: -79097879, guid: 2a71a74f5cfaf4c70a2e2cc6473adf4a, type: 3}
+  - {fileID: -1617574880, guid: 779ca973f13214ade8f94679a6cb6714, type: 3}
   price: 0

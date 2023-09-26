@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Underwear
   type: 0
   shape:
-  - {fileID: 21300000, guid: ec4a2bc797d924d3585717cf240bd8b4, type: 3}
-  - {fileID: 21300000, guid: b16919bbaffd24056abcf8ce1962c666, type: 3}
-  - {fileID: 21300000, guid: 911d4f2c999c2441e81a1fb120ed348f, type: 3}
+  - {fileID: 588402825, guid: ec4a2bc797d924d3585717cf240bd8b4, type: 3}
+  - {fileID: -1746032972, guid: b16919bbaffd24056abcf8ce1962c666, type: 3}
+  - {fileID: 1306740427, guid: 911d4f2c999c2441e81a1fb120ed348f, type: 3}
   price: 0

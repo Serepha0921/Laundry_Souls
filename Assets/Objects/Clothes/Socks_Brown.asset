@@ -16,6 +16,6 @@ MonoBehaviour:
   Clothes_name: Socks
   type: 0
   shape:
-  - {fileID: 21300000, guid: b42724cea07314e52a9caf6f697d24cc, type: 3}
-  - {fileID: 21300000, guid: 436eeee41ecec4f2f87830bc5123a259, type: 3}
+  - {fileID: -106095669, guid: b42724cea07314e52a9caf6f697d24cc, type: 3}
+  - {fileID: 1911772284, guid: 436eeee41ecec4f2f87830bc5123a259, type: 3}
   price: 0

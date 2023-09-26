@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Jeans
   type: 0
   shape:
-  - {fileID: 21300000, guid: f8047260fd4df42ce883a222047b696a, type: 3}
-  - {fileID: 21300000, guid: d4c9c42d38ae24a7994d1ed4132d517b, type: 3}
-  - {fileID: 21300000, guid: 3a022b593fee64ce39e3a35a7a6b5469, type: 3}
+  - {fileID: 1485860166, guid: f8047260fd4df42ce883a222047b696a, type: 3}
+  - {fileID: -250786373, guid: d4c9c42d38ae24a7994d1ed4132d517b, type: 3}
+  - {fileID: -547835528, guid: 3a022b593fee64ce39e3a35a7a6b5469, type: 3}
   price: 0

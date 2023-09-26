@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Shorts
   type: 0
   shape:
-  - {fileID: 21300000, guid: 6497659d92daf4ffd9914aee5a9a64f1, type: 3}
-  - {fileID: 21300000, guid: a2704d8940722488d8304677be59a9de, type: 3}
-  - {fileID: 21300000, guid: a993e110e4b524e98b92f72b6ccc5327, type: 3}
+  - {fileID: 580500014, guid: 6497659d92daf4ffd9914aee5a9a64f1, type: 3}
+  - {fileID: -63417599, guid: a2704d8940722488d8304677be59a9de, type: 3}
+  - {fileID: 1837052003, guid: a993e110e4b524e98b92f72b6ccc5327, type: 3}
   price: 0

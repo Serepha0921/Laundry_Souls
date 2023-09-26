@@ -16,7 +16,7 @@ MonoBehaviour:
   Clothes_name: Jacket
   type: 1
   shape:
-  - {fileID: 21300000, guid: efe22bcad840e4560b5f4a68a94c4582, type: 3}
-  - {fileID: 21300000, guid: b320ab493e91746ebb2559be0849e774, type: 3}
-  - {fileID: 21300000, guid: 8c1021d736bf844418e279bd2dc2ec3f, type: 3}
+  - {fileID: -1494814893, guid: efe22bcad840e4560b5f4a68a94c4582, type: 3}
+  - {fileID: -1312234717, guid: b320ab493e91746ebb2559be0849e774, type: 3}
+  - {fileID: -290960803, guid: 8c1021d736bf844418e279bd2dc2ec3f, type: 3}
   price: 0
