@@ -105,8 +105,8 @@ public class TitleSceneManager : MonoBehaviour
         isPlaying = true;
 
         Debug.Log("Move_To_nextScene");
-        nextScene.scenetoLoad = 3;
-        SceneManager.LoadScene(2);
+        nextScene.scenetoLoad = 2;
+        SceneManager.LoadScene(1);
 
         yield return null;
     }
