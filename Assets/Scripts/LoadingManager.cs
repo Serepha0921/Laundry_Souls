@@ -14,6 +14,7 @@ public class LoadingManager : MonoBehaviour
 
     private void Start()
     {
+        SceneLevel = nextScene.scenetoLoad;
         loadingscene();
     }
 

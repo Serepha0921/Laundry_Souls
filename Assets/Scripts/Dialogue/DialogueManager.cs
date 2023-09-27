@@ -6,6 +6,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour {
 
+    public GameObject UI;
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Dialogue;
 
@@ -15,22 +16,31 @@ public class DialogueManager : MonoBehaviour {
     private message[] current_message;
     private int active_dialogue = 0;
 
+    public static DialogueManager instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 	// Use this for initialization
 	void Start () {
         sentences = new Queue<string>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void StartDialogue(Dialogue dialogue){
+        UI.SetActive(true);
         current_actor = dialogue.actors;
         current_message = dialogue.messages;
         active_dialogue = 0;
-
-        Name.text = current_actor[current_message[active_dialogue].id].name;
         sentences.Clear();
 
         foreach (string sentence in current_message[active_dialogue].sentences){
@@ -45,15 +55,15 @@ public class DialogueManager : MonoBehaviour {
         {
             active_dialogue += 1;
             if (current_message.Length - 1 < active_dialogue){
-                Debug.Log("dialogue End");
+                UI.SetActive(false);
                 return;
             }
-            Name.text = current_actor[current_message[active_dialogue].id].name;
             foreach (string mess in current_message[active_dialogue].sentences){
                 sentences.Enqueue(mess);
             }
         }
         string sentence = sentences.Dequeue();
+        Name.text = current_actor[current_message[active_dialogue].id].name;
         Dialogue.text = sentence;
         StopAllCoroutines();
         StartCoroutine(typing(sentence));

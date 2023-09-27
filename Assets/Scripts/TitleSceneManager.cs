@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public class nextScene{
+    public static int scenetoLoad = 0;
+}
 public class TitleSceneManager : MonoBehaviour
 {
     [Header("Background")]
@@ -102,7 +105,8 @@ public class TitleSceneManager : MonoBehaviour
         isPlaying = true;
 
         Debug.Log("Move_To_nextScene");
-        SceneManager.LoadScene("Intro");
+        nextScene.scenetoLoad = 3;
+        SceneManager.LoadScene(2);
 
         yield return null;
     }
